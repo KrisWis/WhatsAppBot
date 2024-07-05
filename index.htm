@@ -1,0 +1,924 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/javascript"
+      src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=PICfYly5XKYoo0-Sd_ydN6do4JwjjzVEjaWA7xyZShSp4zxW3EUnBaI9pCqQwbSa"
+      charset="UTF-8"
+    ></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-16609667812"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-16609667812");
+    </script>
+
+    <meta name="google" content="notranslate" />
+
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+
+    <title>WhatsApp Bot</title>
+
+    <link rel="shortcut icon" href="logo-min.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="main.css" />
+
+    <link href="css2" rel="stylesheet" />
+
+    <style>
+      form {
+        position: relative;
+      }
+
+      #preloader {
+        display: none;
+        position: absolute;
+        top: -5px;
+        left: -5px;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        background: #bdbdbdb3;
+        z-index: 1;
+        border-radius: 5px;
+      }
+
+      #preloader img {
+        position: absolute;
+        z-index: 2;
+        top: calc(50% - 25px);
+        left: calc(50% - 25px);
+        width: 50px;
+        height: 50px;
+      }
+
+      form button[type="submit"] {
+        margin-top: 15px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"
+    />
+    <link rel="stylesheet" href="validation/validation.css" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  </head>
+
+  <body translate="no" class="add-scroll" cz-shortcut-listen="true">
+    <div class="main-desc b-show">
+      <div class="main-desc__img"></div>
+      <div class="main-desc__body"></div>
+    </div>
+    <div class="body" style="transform: translateY(0px)">
+      <h1 class="main__title">
+        Зарабатывайте до 10 000 евро в месяц на уникальной платформе WhatsApp
+      </h1>
+      <div class="content">
+        <div class="header">
+          <div class="header__body">
+            <div class="header__name">
+              <div class="header__avatar">
+                <img src="logo.png" alt="" />
+              </div>
+              <div class="header__desc">
+                <p>WhatsApp Bot</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat">
+          <div class="chat__time">
+            <p>Сегодня</p>
+          </div>
+          <div class="chat-content-list"></div>
+
+          <input type="text" class="inp" id="res" value="0" readonly="" />
+
+          <!-- /scroll -->
+
+          <div id="form" class="iframe-form">
+            <div id="order" class="boxit">
+              <div class="frame-container" style="padding: 30px">
+                <div class="row-form">
+                  <h4 class="form__title">
+                    Заполните поле ниже и начните зарабатывать
+                  </h4>
+                  <form class="main_form" id="form">
+                    <div class="input_wrapper">
+                      <div class="form-group input-group input-wrap">
+                        <input
+                          required=""
+                          class="form-control input-roulette form-input"
+                          type="text"
+                          name="firstName"
+                          placeholder="Ваше имя"
+                          id="name1"
+                          autocomplete="on"
+                        />
+                        <p class="error error-fname"></p>
+                        <div class="help-block help-block-error"></div>
+                      </div>
+                      <div class="form-group input-group input-wrap">
+                        <input
+                          required=""
+                          class="form-control input-roulette form-input"
+                          type="text"
+                          name="lastName"
+                          placeholder="Ваша фамилия"
+                          id="name1"
+                          autocomplete="on"
+                        />
+                        <p class="error error-lname"></p>
+                        <div class="help-block help-block-error"></div>
+                      </div>
+                      <div class="form-group input-group input-wrap">
+                        <input
+                          required=""
+                          class="form-control input-roulette form-input"
+                          type="email"
+                          name="email"
+                          placeholder="Email"
+                          id="email"
+                          autocomplete="on"
+                          data-scrapbook-input-value=""
+                        />
+                        <p class="error error-email"></p>
+                        <div class="help-block help-block-error"></div>
+                      </div>
+                      <div class="form-group input-group input-wrap">
+                        <input
+                          type="tel"
+                          name="phone"
+                          id="phone"
+                          placeholder="Введите номер телефона с кодом страны"
+                          class="form-control input-roulette form-input phone"
+                        />
+
+                        <p class="error error-fullphone"></p>
+                        <div class="help-block help-block-error"></div>
+                      </div>
+                      <input type="hidden" name="clickid" value="{clickid}" />
+
+                      <div class="form-group">
+                        <button class="" id="sendForm" type="submit">
+                          Регистрация
+                        </button>
+                      </div>
+                    </div>
+                    <div
+                      class="form_message error inactive"
+                      style="
+                        margin: 15px 0;
+                        background-color: #ffd4d4;
+                        border: 2px dashed #ce0909;
+                        border-radius: 10px;
+                        padding: 20px;
+                      "
+                    ></div>
+                  </form>
+                  <style>
+                    .form_message.error.inactive {
+                      display: none;
+                    }
+
+                    .form_message.error.active {
+                      display: block;
+                      color: #0a0a0a;
+                    }
+                  </style>
+                  <!-- form -->
+                </div>
+
+                <div id="down-box"></div>
+              </div>
+            </div>
+          </div>
+
+          <script>
+            const OFFER = "«Vivalgus»";
+            let choiceArray = [];
+            let now = new Date(),
+              mm = now.getMonth() + 1,
+              day = now.getDate(),
+              year = now.getFullYear(),
+              date = day + "." + mm + "." + year;
+            const massange = [
+              {
+                m: `Привет! Мы рады приветствовать вас на официальной платформе для заработка WhatsApp Business! Я автоматический робот, созданный Марком Цукербергом для работы на финансовом рынке!`,
+              },
+              {
+                m: `Моя работа заключается в анализе финансового рынка и заключении прибыльных сделок с акциями мировых компаний. Это позволяет получать стабильный доход от 500 евро в день без опыта!`,
+              },
+              {
+                m: `Могу ли я рассчитать ваш средний дневной доход? `,
+              },
+              {
+                m: ` Довольны ли вы уровнем своего дохода? `,
+              },
+              {
+                m: ` Сколько часов в день вы тратите на работу? `,
+              },
+              {
+                m: `У вас есть пассивный источник дохода? `,
+              },
+              {
+                m: `Независимо от того, есть у вас опыт пассивного дохода или нет, я даю вам возможность получать пассивный доход с помощью моего искусственного интеллекта без каких-либо знаний и опыта!`,
+              },
+              {
+                m: `Перейдем к следующему вопросу. `,
+              },
+
+              {
+                m: `Среднемесячный доход пользователя составляет 14 000 евро. При этом на использование программы нужно тратить 1-2 часа в день! Сколько времени вы готовы потратить на получение такого дохода? `,
+              },
+              {
+                m: `Спасибо за заполнение опроса! Анализирую ваши ответы несколько секунд.... `,
+              },
+              {
+                m: `У меня для вас хорошие новости, вы можете зарабатывать на платформе Whatsapp Business. Ваш расчетный ежедневный доход составляет 420 евро! Но через неделю эта сумма может стать еще больше! `,
+              },
+            ];
+            var mass_id = 0,
+              length_mass = 0,
+              lengt_num_mas = 0,
+              text = "",
+              speedtext = 14,
+              process = !0;
+            function app() {
+              var e = new Date(),
+                s = ("0" + e.getMinutes()).slice(-2),
+                t = ("0" + e.getHours()).slice(-2) + ":" + s;
+              if ($(".chat").height() + 100 > $(".content").height()) {
+                $("#scroll_id").removeClass("hide");
+                var n = $(".inp").val();
+                $(".inp").val(++n);
+              }
+              const c = `<div class="chat-content-item manager ">
+                        <div class="chat-content-desc">
+                            <div class="chat-content-desc-item manager">
+                                <p class="message-time" id="time"> ${t} </p>
+                                <p class="text" id="mass${mass_id}"></p>
+                            </div>
+                        </div>
+                    </div>`;
+              $(".chat-content-list").append(c),
+                "0" == document.getElementById("res").value
+                  ? $("#scroll_id").addClass("aba")
+                  : $("#scroll_id").removeClass("aba");
+              $(".content").animate(
+                { scrollTop: $(".chat-content-list").height() },
+                200
+              ),
+                $("#scroll_id").addClass("hide");
+            }
+            function myMassange(e) {
+              var s = new Date(),
+                t = ("0" + s.getMinutes()).slice(-2);
+              let n = `<div class="chat-content-item user item-active">
+                        <div class="chat-content-desc">
+                            <div class="chat-content-desc-item user">
+                                <p class="message-time" id="time"> 
+                                    ${("0" + s.getHours()).slice(-2) + ":" + t}
+                                </p>
+                                <p class="text"> 
+                                    ${e}
+                                </p>
+                            </div>
+                        </div>
+                    </div>`;
+              $(".chat-content-list").append(n),
+                $(".content").animate(
+                  {
+                    scrollTop: $(".chat-content-list").height(),
+                  },
+                  700
+                ),
+                $("#scroll_id").addClass("hide");
+            }
+            function question1() {
+              $(".chat-content-list").append(
+                `<div class="chat-content-buttons-gender">
+				    	<div class="chat-content-buttons-gender-block">
+				    		<span class="question1M">
+                                Начать
+                            </span>
+				    	</div>
+				    </div>`
+              );
+            }
+            function choise1() {
+              $(".question1M").click(() => {
+                (document.querySelector(
+                  ".chat-content-buttons-gender"
+                ).style.display = "none"),
+                  myMassange("Начать"),
+                  choiceArray.push("Начать"),
+                  setTimeout(() => {
+                    process = !0;
+                  }, 500);
+              });
+            }
+            function question2() {
+              $(".chat-content-list").append(
+                `<div class="chat-content-buttons-gender">
+				    	<div class="chat-content-buttons-gender-block">
+				    		<span class="question2M" onclick="answers_list.push(this.innerText)">
+                                Да, я доволен, но хотелось бы большего
+                            </span>
+				    	</div>
+				    	<div class="chat-content-buttons-gender-block">
+				    		<span class="question2W" onclick="answers_list.push(this.innerText)">
+                                Нет, я не доволен, я хотел бы больше
+                            </span>
+				    	</div>
+				    	<div class="chat-content-buttons-gender-block">
+				    		<span class="question2P" onclick="answers_list.push(this.innerText)">
+                                Нет дохода
+                            </span>
+				    	</div>
+				    </div>`
+              );
+            }
+            function choise2() {
+              $(".question2M").click(() => {
+                (document.querySelector(
+                  ".chat-content-buttons-gender"
+                ).style.display = "none"),
+                  myMassange(" Да, я доволен, но хотелось бы большего"),
+                  choiceArray.push(" Да, я доволен, но хотелось бы большего"),
+                  $(".chat-content-buttons-gender").css("display", "none"),
+                  setTimeout(() => {
+                    process = !0;
+                  }, 500);
+              }),
+                $(".question2W").click(() => {
+                  (document.querySelector(
+                    ".chat-content-buttons-gender"
+                  ).style.display = "none"),
+                    myMassange("Нет, я не доволен, я хотел бы больше"),
+                    choiceArray.push("Нет, я не доволен, я хотел бы больше"),
+                    $(".chat-content-buttons-gender").css("display", "none"),
+                    setTimeout(() => {
+                      process = !0;
+                    }, 500);
+                }),
+                $(".question2P").click(() => {
+                  (document.querySelector(
+                    ".chat-content-buttons-gender"
+                  ).style.display = "none"),
+                    myMassange("Нет дохода"),
+                    choiceArray.push("Нет дохода"),
+                    $(".chat-content-buttons-gender").css("display", "none"),
+                    setTimeout(() => {
+                      process = !0;
+                    }, 500);
+                });
+            }
+            function question3() {
+              $(".chat-content-list").append(
+                `<div class="chat-content-buttons-gender">
+				    	<div class="chat-content-buttons-gender-block">
+				    		<span class="question3M" onclick="answers_list.push(this.innerText)">
+                                2-5 часов
+                            </span>
+				    	</div>
+				    	<div class="chat-content-buttons-gender-block">
+				    		<span class="question3W" onclick="answers_list.push(this.innerText)">
+                                5-8 часов
+                            </span>
+				    	</div>
+				    	<div class="chat-content-buttons-gender-block">
+				    		<span class="question3P" onclick="answers_list.push(this.innerText)">
+                                Более 8 часов в день
+                            </span>
+				    	</div>
+                        <div class="chat-content-buttons-gender-block">
+				    		<span class="question3T" onclick="answers_list.push(this.innerText)">
+                                Я не работаю
+                            </span>
+				    	</div>
+				    </div>`
+              );
+            }
+            function choise3() {
+              $(".question3M").click(() => {
+                (document.querySelector(
+                  ".chat-content-buttons-gender"
+                ).style.display = "none"),
+                  myMassange("2-5 часов"),
+                  choiceArray.push("2-5 часов"),
+                  $(".chat-content-buttons-gender").css("display", "none"),
+                  setTimeout(() => {
+                    process = !0;
+                  }, 500);
+              }),
+                $(".question3W").click(() => {
+                  (document.querySelector(
+                    ".chat-content-buttons-gender"
+                  ).style.display = "none"),
+                    myMassange("5-8 часов"),
+                    choiceArray.push("5-8 часов"),
+                    $(".chat-content-buttons-gender").css("display", "none"),
+                    setTimeout(() => {
+                      process = !0;
+                    }, 500);
+                }),
+                $(".question3P").click(() => {
+                  (document.querySelector(
+                    ".chat-content-buttons-gender"
+                  ).style.display = "none"),
+                    myMassange("Более 8 часов в день"),
+                    choiceArray.push("Более 8 часов в день"),
+                    $(".chat-content-buttons-gender").css("display", "none"),
+                    setTimeout(() => {
+                      process = !0;
+                    }, 500);
+                }),
+                $(".question3T").click(() => {
+                  (document.querySelector(
+                    ".chat-content-buttons-gender"
+                  ).style.display = "none"),
+                    myMassange("Я не работаю"),
+                    choiceArray.push("Я не работаю"),
+                    $(".chat-content-buttons-gender").css("display", "none"),
+                    setTimeout(() => {
+                      process = !0;
+                    }, 500);
+                });
+            }
+
+            function question4() {
+              $(".chat-content-list").append(
+                `<div class="chat-content-buttons-gender">
+                        <div class="chat-content-buttons-gender-block">
+                            <span class="question4M" onclick="answers_list.push(this.innerText)">
+                                Да
+                            </span>
+                        </div>
+                        <div class="chat-content-buttons-gender-block">
+                            <span class="question4W" onclick="answers_list.push(this.innerText)">
+                                Нет, но я хотел бы иметь
+                            </span>
+                        </div>
+                    </div>`
+              );
+            }
+
+            function choise4() {
+              $(".question4M").click(() => {
+                (document.querySelector(
+                  ".chat-content-buttons-gender"
+                ).style.display = "none"),
+                  myMassange("Да"),
+                  choiceArray.push("Да"),
+                  $(".chat-content-buttons-gender").css("display", "none"),
+                  setTimeout(() => {
+                    process = !0;
+                  }, 500);
+              }),
+                $(".question4W").click(() => {
+                  (document.querySelector(
+                    ".chat-content-buttons-gender"
+                  ).style.display = "none"),
+                    myMassange("Нет, но я хотел бы иметь"),
+                    choiceArray.push("Нет, но я хотел бы иметь"),
+                    $(".chat-content-buttons-gender").css("display", "none"),
+                    setTimeout(() => {
+                      process = !0;
+                    }, 500);
+                });
+            }
+
+            function question5() {
+              $(".chat-content-list").append(
+                `<div class="chat-content-buttons-gender">
+					<div class="chat-content-buttons-gender-block">
+						<span class="question5M" onclick="answers_list.push(this.innerText)">
+                            До 1 часа в день
+                        </span>
+					</div>
+					<div class="chat-content-buttons-gender-block">
+						<span class="question5W" onclick="answers_list.push(this.innerText)">
+                            До 2 часов в день
+                        </span>
+					</div>
+					<div class="chat-content-buttons-gender-block">
+						<span class="question5P" onclick="answers_list.push(this.innerText)">
+                            В любой момент
+                        </span>
+					</div>
+				</div>`
+              );
+            }
+
+            function choise5() {
+              $(".question5M").click(() => {
+                (document.querySelector(
+                  ".chat-content-buttons-gender"
+                ).style.display = "none"),
+                  myMassange(" До 1 часа в день"),
+                  choiceArray.push("До 1 часа в день"),
+                  $(".chat-content-buttons-gender").css("display", "none"),
+                  setTimeout(() => {
+                    process = !0;
+                  }, 500);
+              }),
+                $(".question5W").click(() => {
+                  (document.querySelector(
+                    ".chat-content-buttons-gender"
+                  ).style.display = "none"),
+                    myMassange("До 2 часов в день"),
+                    choiceArray.push("До 2 часов в день"),
+                    $(".chat-content-buttons-gender").css("display", "none"),
+                    setTimeout(() => {
+                      process = !0;
+                    }, 500);
+                }),
+                $(".question5P").click(() => {
+                  (document.querySelector(
+                    ".chat-content-buttons-gender"
+                  ).style.display = "none"),
+                    myMassange("В любой момент"),
+                    choiceArray.push("В любой момент"),
+                    $(".chat-content-buttons-gender").css("display", "none"),
+                    setTimeout(() => {
+                      process = !0;
+                    }, 500);
+                });
+              setTimeout(() => {
+                const descriptionInput = document.querySelector(
+                  "input[name='description']"
+                );
+                descriptionInput.value = choiceArray.join(", ");
+              }, 1000);
+            }
+            setTimeout(() => {
+              var e = new Date(),
+                s = ("0" + e.getMinutes()).slice(-2);
+              const t = `<div class="chat-content-item manager ">
+                        <div class="chat-content-desc">
+                            <div class="chat-content-desc-item manager">
+                                <p class="message-time" id="time"> ${
+                                  ("0" + e.getHours()).slice(-2) + ":" + s
+                                } </p>
+                                <p class="text" id="mass${mass_id}"></p>
+                            </div>
+                        </div>
+                    </div>`;
+              $(".chat-content-list").append(t),
+                $("#scroll_id").click(function (e) {
+                  $(this).removeClass("hide-q"),
+                    $(".content").animate(
+                      { scrollTop: $(".chat").height() },
+                      700
+                    );
+                });
+              const n = setInterval(function () {
+                if (1 == process)
+                  if (lengt_num_mas != massange.length) {
+                    if (
+                      ((text += massange[lengt_num_mas].m[length_mass]),
+                      length_mass++,
+                      $("#mass" + lengt_num_mas).html(text),
+                      2 === lengt_num_mas &&
+                        length_mass === massange[lengt_num_mas].m.length - 1 &&
+                        (question1(),
+                        (process = !1),
+                        choise1(),
+                        $("#scroll_id").addClass("hide-q"),
+                        $(".content").animate(
+                          {
+                            scrollTop: $(".chat").height(),
+                          },
+                          700
+                        ),
+                        $("#scroll_id").removeClass("hide-q")),
+                      3 === lengt_num_mas &&
+                        length_mass === massange[lengt_num_mas].m.length - 1 &&
+                        (question2(),
+                        (process = !1),
+                        choise2(),
+                        $("#scroll_id").addClass("hide-q"),
+                        $(".content").animate(
+                          {
+                            scrollTop: $(".chat").height(),
+                          },
+                          700
+                        ),
+                        $("#scroll_id").removeClass("hide-q")),
+                      4 === lengt_num_mas &&
+                        length_mass === massange[lengt_num_mas].m.length - 1 &&
+                        (question3(),
+                        (process = !1),
+                        choise3(),
+                        $("#scroll_id").addClass("hide-q"),
+                        $(".content").animate(
+                          {
+                            scrollTop: $(".chat").height(),
+                          },
+                          700
+                        ),
+                        $("#scroll_id").removeClass("hide-q")),
+                      5 === lengt_num_mas &&
+                        length_mass === massange[lengt_num_mas].m.length - 1 &&
+                        (question4(),
+                        (process = !1),
+                        choise4(),
+                        $("#scroll_id").addClass("hide-q"),
+                        $(".content").animate(
+                          {
+                            scrollTop: $(".chat").height(),
+                          },
+                          700
+                        ),
+                        $("#scroll_id").removeClass("hide-q")),
+                      8 === lengt_num_mas &&
+                        length_mass === massange[lengt_num_mas].m.length - 1 &&
+                        (question5(),
+                        (process = !1),
+                        choise5(),
+                        $("#scroll_id").addClass("hide-q"),
+                        $(".content").animate(
+                          {
+                            scrollTop: $(".chat").height(),
+                          },
+                          700
+                        ),
+                        $("#scroll_id").removeClass("hide-q")),
+                      14 === lengt_num_mas &&
+                        length_mass === massange[lengt_num_mas].m.length - 1 &&
+                        (question8(),
+                        (process = !1),
+                        choise8(),
+                        $("#scroll_id").addClass("hide-q"),
+                        $(".content").animate(
+                          {
+                            scrollTop: $(".chat").height(),
+                          },
+                          700
+                        ),
+                        $("#scroll_id").removeClass("hide-q")),
+                      length_mass == massange[lengt_num_mas].m.length)
+                    ) {
+                      lengt_num_mas++,
+                        mass_id++,
+                        (length_mass = 0),
+                        (text = ""),
+                        app();
+                    }
+                  } else
+                    clearInterval(n),
+                      $("#mass" + lengt_num_mas)
+                        .parent()
+                        .parent()
+                        .css("display", "none"),
+                      $(".iframe-form").addClass("show"),
+                      $(".btn-top").addClass("show"),
+                      $(".reviews").removeClass("hide");
+              }, speedtext);
+            }, 1e3),
+              $(".content").scroll(function () {
+                "0" == document.getElementById("res").value
+                  ? $("#scroll_id").addClass("aba")
+                  : $("#scroll_id").removeClass("aba");
+              });
+            var $marker = $("#down-box");
+            $(".content").scroll(function () {
+              $(".content").scrollTop() + $(".content").height() >=
+              $(".chat").height() + 100
+                ? ((document.getElementById("res").value = "0"),
+                  $("#scroll_id").addClass("hide"))
+                : $("#scroll_id").removeClass("hide");
+            });
+          </script>
+
+          <div id="myModal" class="modal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h2>Ooops...</h2>
+                <span class="close">×</span>
+              </div>
+              <div class="modal-body">
+                <p class="modal-error">Some text in the Modal Body</p>
+              </div>
+            </div>
+          </div>
+
+          <style>
+            .error-border {
+              border: dashed 1px #ce0909;
+            }
+
+            p.error-msg {
+              margin: 0;
+              color: #ce0909;
+              padding: 5px 0 0;
+              font-size: 14px;
+              font-style: italic;
+            }
+
+            .modal {
+              display: none;
+              /* Hidden by default */
+              position: fixed;
+              /* Stay in place */
+              z-index: 1;
+              /* Sit on top */
+              left: 0;
+              top: 0;
+              width: 100%;
+              /* Full width */
+              height: 100%;
+              /* Full height */
+              overflow: auto;
+              /* Enable scroll if needed */
+              background-color: rgb(0, 0, 0);
+              /* Fallback color */
+              background-color: rgba(0, 0, 0, 0.4);
+              /* Black w/ opacity */
+              -webkit-animation-name: fadeIn;
+              /* Fade in the background */
+              -webkit-animation-duration: 0.4s;
+              animation-name: fadeIn;
+              animation-duration: 0.4s;
+            }
+
+            .modal-content {
+              position: fixed;
+              left: 50%;
+              top: 20%;
+              transform: translate(-50%, 0);
+              background-color: #fefefe;
+              max-width: 400px;
+              min-height: 300px;
+              -webkit-animation-name: slideIn;
+              -webkit-animation-duration: 0.4s;
+              animation-name: slideIn;
+              animation-duration: 0.4s;
+            }
+
+            .close {
+              color: white;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+            }
+
+            .modal-header {
+              padding: 2px 16px;
+              background-color: #ff1838;
+              color: white;
+            }
+
+            .modal-body {
+              padding: 16px;
+              text-align: center;
+            }
+
+            /* Add Animation */
+            @-webkit-keyframes slideIn {
+              from {
+                opacity: 0;
+              }
+
+              to {
+                bottom: 0;
+                opacity: 1;
+              }
+            }
+
+            @keyframes slideIn {
+              from {
+                opacity: 0;
+              }
+
+              to {
+                bottom: 0;
+                opacity: 1;
+              }
+            }
+
+            @-webkit-keyframes fadeIn {
+              from {
+                opacity: 0;
+              }
+
+              to {
+                opacity: 1;
+              }
+            }
+
+            @keyframes fadeIn {
+              from {
+                opacity: 0;
+              }
+
+              to {
+                opacity: 1;
+              }
+            }
+          </style>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+    <script src="validation/validation.js?v=2"></script>
+    <footer class="footer">
+      <nav class="footer__links">
+        <ul>
+          <li>
+            <a href="policy.html">Политика конфиденциальности</a>
+          </li>
+          <li>
+            <a href="terms.html">Условия использования</a>
+          </li>
+        </ul>
+        <div class="cookie">
+          <p>
+            Этот веб-сайт использует файлы cookie, чтобы обеспечить вам
+            максимальное удобство использования нашего веб-сайта.
+            <a href="policy.html">Выучить больше</a>
+          </p>
+          <button>Понятно!</button>
+        </div>
+        <style>
+          .footer {
+            bottom: 0;
+            left: 0;
+            text-align: center;
+            position: absolute;
+            z-index: 9998;
+            width: 100%;
+            background: #fff;
+          }
+          .footer__links li a {
+            font-size: 14px !important;
+          }
+          .cookie {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px;
+          }
+
+          .cookie a {
+            color: #337ab7 !important;
+            cursor: pointer;
+            float: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+          }
+
+          .cookie p {
+            display: inline;
+            font-size: 14px;
+          }
+
+          .cookie p,
+          button {
+            color: #fff;
+          }
+
+          .cookie button {
+            cursor: pointer;
+            padding: 5px 10px;
+            border: 0 !important;
+            border-radius: 5px !important;
+            background: #337ab7;
+          }
+        </style>
+        <script>
+          var answers_list = [];
+          const cookieButton = document.querySelector(".cookie button");
+          cookieButton.onclick = (event) => {
+            event.preventDefault();
+            event.target.parentElement.style.display = "none";
+          };
+        </script>
+      </nav>
+    </footer>
+  </body>
+</html>
